@@ -44,15 +44,10 @@ YnabApplet.prototype = {
     },
 
     bindPrefs: function() {
-        global.log('=========== binding preferences');
         this.settings = new Settings.AppletSettings(this.preferences, UUID, this.instance_id);
-        this.settings.bindProperty(Settings.BindingDirection.IN,
-            "apiKey",
-            "apiKey",
-            this.onApiKeyChanged.bind(this),
-            null);
-
+        this.settings.bindProperty(Settings.BindingDirection.IN, "apiKey", "apiKey", this.onApiKeyChanged.bind(this), null);
         this.settings.bindProperty(Settings.BindingDirection.BIDIRECTIONAL, "budgetKey", "budgetKey", this.onBudgetChanged.bind(this), null);
+        this.settings.bindProperty(Settings.BindingDirection.IN, "updateFrequency", "updateFrequency", this.onUpdateFrequencyChanged.bind(this), null);
     },
 
     connectToApi: function() {
@@ -92,6 +87,10 @@ YnabApplet.prototype = {
 
     onBudgetChanged: function() {
         this.setAlerts();
+    },
+
+    onUpdateFrequencyChanged: function() {
+        // will automatically be picked up by the loop
     },
 
     createPopupMenu: function() {
@@ -173,8 +172,7 @@ YnabApplet.prototype = {
     
     _update_loop: function () {
         if(this.budgets.length) { this.setAlerts(); }
-        // run the loop every hour (3600000)
-        this._updateLoopID = Mainloop.timeout_add(3600000, Lang.bind(this, this._update_loop));
+        this._updateLoopID = Mainloop.timeout_add(this.preferences.updateFrequency * 1000, Lang.bind(this, this._update_loop));
     }
 };
 

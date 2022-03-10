@@ -10,7 +10,7 @@
         "common_s": {
             "type": "section",
             "title": "General",
-            "keys": ["apiKey", "budgetKey"]
+            "keys": ["apiKey", "budgetKey", "updateFrequency"]
         }
     },
     "apiKey": {
@@ -22,6 +22,11 @@
     "budgetKey": {
         "type": "entry",
         "default": "",
-        "description": "Budget Key (Click on Applet to choose)"
+        "description": "Budget Key (Click on applet to choose)"
+    },
+    "updateFrequency": {
+        "type": "entry",
+        "default": "3600",
+        "description": "Update Frequency (seconds)"
     }
 }
