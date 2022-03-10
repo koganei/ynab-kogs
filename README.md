@@ -5,6 +5,13 @@ This applet will sit in your panel and notify you when transactions require your
 
 ![image](https://user-images.githubusercontent.com/3085772/157668040-c12779bb-4fdc-4437-a0ec-67364ea925f1.png)
 
+## Installation
+
+- Download from the Spices Web Site
+- Unzip and extract folder batterymonitor@pdcurtis to ~/.local/share/cinnamon/applets/
+- Enable the applet in System Settings -> Applets
+- You can also access the Settings Screen from System Settings -> Applets or from the Applet's Context menu
+
 ## Configuration
 - Open your [YNAB Developer Settings](https://app.youneedabudget.com/settings/developer) and generate a new Personal Access Token.
 - Right-click on the YNAB Applet and enter your API Key
