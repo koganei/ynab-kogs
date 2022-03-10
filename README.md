@@ -8,7 +8,7 @@ This applet will sit in your panel and notify you when transactions require your
 ## Installation
 
 - Download the zip from this page
-- Unzip and extract folder batterymonitor@pdcurtis to ~/.local/share/cinnamon/applets/
+- Unzip and extract into ~/.local/share/cinnamon/applets/ynab@kogs
 - Enable the applet in System Settings -> Applets
 - You can also access the Settings Screen from System Settings -> Applets or from the Applet's Context menu
 
