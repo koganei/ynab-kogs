@@ -1,0 +1,27 @@
+{
+    "layout": {
+        "type": "layout",
+        "pages": ["common"],
+        "common": {
+            "type": "page",
+            "title": "Common",
+            "sections": ["common_s"]
+        },
+        "common_s": {
+            "type": "section",
+            "title": "General",
+            "keys": ["apiKey", "budgetKey"]
+        }
+    },
+    "apiKey": {
+		"type": "entry",
+		"default": "",
+		"description": "API Key",
+		"tooltip": "Copy this from your account."
+	},
+    "budgetKey": {
+        "type": "entry",
+        "default": "",
+        "description": "Budget Key (Click on Applet to choose)"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "uuid": "ynab@kogs",
+    "name": "YNAB Status",
+    "description": "Show some YNAB info",
+    "icon": "force-exit",
+    "max-instances": "-1"
+}
